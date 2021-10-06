@@ -1,35 +1,77 @@
 .rootContainer {
-    height: 100%;
+  height: 100%;
+}
+
+.contentContainer {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 12px;
+    background-color: #ffffff;
   }
-  
-  .contentContainer {
-    padding: 24px;
-    margin: 0;
-    min-height: inherit;
-    max-height: inherit;
-    overflow-x: hidden;
-    overflow-y: auto;
-    &::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      background-color: #455560;
-    }
-  
-    &::-webkit-scrollbar {
-      width: 12px;
-      background-color: #050505;
-    }
-  
-    &::-webkit-scrollbar-thumb {
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      background-color: rgb(48, 48, 48);
-      border: 1px solid rgba(211, 49, 34, 0.705);
-    }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    border-radius: 0 10px 10px 0;
   }
-  
-  .ant-breadcrumb-separator {
-    color: rgba(211, 49, 34, 0.705);
+
+  &::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #a4a6db;
+    border: 1px solid #a4a6db;
+    border-radius: 0 10px 10px 0;
   }
-  .ant-breadcrumb-link {
-    color: rgb(172, 172, 172);
-  }
-  
+}
+
+.ant-breadcrumb-separator {
+  color: #000000 !important;
+}
+.ant-breadcrumb-link {
+  color: rgb(0, 0, 0) !important;
+}
+
+.ant-layout-header {
+  height: 64px;
+  padding: 0;
+  line-height: 64px;
+  transition: all 0.2s;
+  width: -webkit-fill-available;
+  border-bottom: none;
+  background-color: transparent !important;
+}
+
+.ant-header-custom {
+  background-color: transparent !important;
+}
+
+.ant-dropdown-link-user-dropdown {
+  border-radius: 30px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+// .ant-menu-item {
+//   // height: 64px !important;
+// }
+.ant-menu-item-no-highlight {
+  border-bottom: 2px solid transparent !important;
+}
+
+.ant-header-custom {
+  background-color: transparent !important;
+  box-shadow: none ;
+  border-bottom: 2px solid transparent !important;
+  transition: background 0.1s !important;
+}
+
+html:not([data-scroll="0"]) .ant-layout-header {
+  background-color: #fff !important;
+  border-bottom: 1px solid #e8e8e8 !important;
+}
+
+html:not([data-scroll="0"]) .ant-header-custom {
+  background-color: #fff !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
+}
